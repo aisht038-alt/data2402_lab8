@@ -24,7 +24,7 @@ def access_data(df):
     print(df.iloc[[0, 3, 5]])
     print(df.loc[['1', '4', '6']])
 
-def task3_filter_data(df):
+def filter_data(df):
 
     good = df[df['class'] == 'good']
     print(len(good))
@@ -73,3 +73,11 @@ def task3_filter_data(df):
 
     print(df['wage-increase-first-year'].mean())
     print(df['wage-increase-first-year'].max())
+
+def main():
+
+    df = load_explore("labor.csv")
+    access_data(df)
+    filter_data(df)
+
+main()
