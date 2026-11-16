@@ -24,4 +24,52 @@ def access_data(df):
     print(df.iloc[[0, 3, 5]])
     print(df.loc[['1', '4', '6']])
 
-access_data()
+def task3_filter_data(df):
+
+    good = df[df['class'] == 'good']
+    print(len(good))
+    print(good)
+
+    bad = df[df['class'] == 'bad']
+    print(len(bad))
+    print(bad)
+
+    high_wage = df[df['wage-increase-first-year'] > 2.5]
+    print(len(high_wage))
+    print(high_wage)
+
+    many_holidays = df[df['statutory-holidays'] > 10]
+    print(len(many_holidays))
+    print(many_holidays)
+
+    both = df[(df['wage-increase-first-year'] > 2.5) & (df['statutory-holidays'] > 10)]
+    print(len(both))
+    print(both)
+
+    print(df['wage-increase-first-year'].mean())
+    print(df['wage-increase-first-year'].max())
+
+def task3_filter_data(df):
+
+    good = df[df['class'] == 'good']
+    print(len(good))
+    print(good)
+
+    bad = df[df['class'] == 'bad']
+    print(len(bad))
+    print(bad)
+
+    high_wage = df[df['wage-increase-first-year'] > 2.5]
+    print(len(high_wage))
+    print(high_wage)
+
+    many_holidays = df[df['statutory-holidays'] > 10]
+    print(len(many_holidays))
+    print(many_holidays)
+
+    both = df[(df['wage-increase-first-year'] > 2.5) & (df['statutory-holidays'] > 10)]
+    print(len(both))
+    print(both)
+
+    print(df['wage-increase-first-year'].mean())
+    print(df['wage-increase-first-year'].max())
